@@ -1,5 +1,5 @@
 <!-- ======= Contact Section ======= -->
-<section class="paralax-mf footer-paralax bg-image sect-mt4 route"
+<section class="paralax-mf footer-paralax bg-image route"
          style="background-image: url(<?= get_template_directory_uri(); ?>/assets/background/johannesburg-4322256_1920.jpg)">
     <div class="overlay-mf"></div>
     <div class="container">

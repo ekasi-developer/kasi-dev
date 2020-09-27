@@ -7,27 +7,31 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="row">
-                                <div class="col-sm-6 col-md-5">
+                                <div class="col-sm-5 col-md-4">
                                     <div class="about-img text-center">
                                         <img src="<?= get_template_directory_uri() ?>/assets/img/my-self.png"
                                              class="img-fluid rounded b-shadow-a"
                                              alt="Themba Lucas Ngubeni">
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-md-7 pt-2 pt-sm-4 mb-4 mb-sm-0">
+                                <div class="col-sm-7 col-md-8 pt-2 pt-sm-4 mb-4 mb-sm-0">
                                     <div class="about-info mt-sm-2 text-center text-sm-left">
-                                        <p><span class="title-s">Name: </span> <span>Themba Lucas Ngubeni</span></p>
-                                        <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
                                         <p>
-                                            <span class="title-s">Email: </span>
-                                            <a href="mailto:thembangubeni04@gmail.com" class="bg">
-                                                contact@example.com
+                                            <span class="title-s text-muted">Name: </span> <span class="font-weight-bolder">Themba Lucas Ngubeni</span>
+                                        </p>
+                                        <p>
+                                            <span class="title-s text-muted">Profile: </span> <span class="font-weight-bolder">Full Stack Developer</span>
+                                        </p>
+                                        <p>
+                                            <span class="title-s text-muted">Email: </span>
+                                            <a href="mailto:thembangubeni04@gmail.com" class="bg font-weight-bolder">
+                                                ThembaNgubeni04@gmail.com
                                             </a>
                                         </p>
                                         <p>
-                                            <span class="title-s">Phone: </span>
-                                            <a href="tel:+27747407518" class="bg">
-                                                0747407518
+                                            <span class="title-s text-muted">Phone: </span>
+                                            <a href="tel:+27747407518" class="bg font-weight-bolder">
+                                                074 740 7518
                                             </a>
                                         </p>
                                     </div>
@@ -57,6 +61,10 @@
                                     <span class="badge badge-dark text-white">Express</span>
                                     <span class="badge badge-dark text-white">Laravel</span>
                                     <span class="badge badge-dark text-white">Wordpress Development</span>
+                                </p>
+                                <p>
+                                    <small>Version Control :</small>
+                                    <span class="badge badge-dark text-white">git</span>
                                 </p>
                             </div>
                         </div>

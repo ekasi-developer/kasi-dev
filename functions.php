@@ -71,12 +71,33 @@ function products_custom_post_type()
             'add_new_item' => 'Add New Project',
             'edit_item' => 'Edit Project'
         ],
-        'menu-icon' => 'dashicons-portfolio',
+        'menu-icon' => 'dashicons-admin-tools',
         'public' => true,
         'has_archive' => true,
         'supports' => [
-            'title', 'thumbnail', 'editor', 'custom-fields', 'tags'
+            'title', 'thumbnail', 'custom-fields'
         ]
     ]);
 }
 add_action('init', 'products_custom_post_type');
+
+// Add custom testimonial posts
+function testimonials_custom_post_type()
+{
+    register_post_type('testimonial', [
+        'rewrite' => ['slug' => 'testimonials'],
+        'labels' => [
+            'name' => 'testimonials',
+            'singlar_name' => 'Testimonial',
+            'add_new_item' => 'Add New Testimonial',
+            'edit_item' => 'Edit Testimonial'
+        ],
+        'menu-icon' => 'dashicons-format-qoute',
+        'public' => true,
+        'has_archive' => true,
+        'supports' => [
+            'title', 'thumbnail', 'editor'
+        ]
+    ]);
+}
+add_action('init', 'testimonials_custom_post_type');
