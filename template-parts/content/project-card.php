@@ -4,11 +4,9 @@ $post_meta_data = get_post_meta(get_the_ID());
 
 ?>
 
-<div class="work-box">
+<div class="work-box card-deck">
 
-    <a href="<?= $feature_image = get_the_post_thumbnail_url(get_the_ID(), 'full') ?>"
-        data-lightbox="<?php the_title() ?>"
-        data-tile="OrangeFarmNews Home Page.">
+    <a href="<?= $feature_image = get_the_post_thumbnail_url(get_the_ID(), 'full') ?>" data-lightbox="<?php the_title() ?>" data-tile="<? get_the_title() ?>">
 
         <div class="work-img">
             <img src="<?= $feature_image ?>" alt="<?= the_title() ?>" class="img-fluid">

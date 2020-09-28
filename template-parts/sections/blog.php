@@ -3,7 +3,7 @@
 $blogArgs = [
     'post_type' => 'post',
     'post_status' => 'publish',
-    'post_per_page' => 3
+    'posts_per_page' => 3
 ];
 
 $blogs = new WP_Query($blogArgs);
@@ -36,7 +36,7 @@ if($blogs->have_posts()):
 
             ?>
 
-                <div class="col-md-4 card-deck">
+                <div class="col-md-4 card-deck mb-5 ml-2">
                     <?php get_template_part('template-parts/content/blog-card') ?>
                 </div>
 
@@ -46,8 +46,8 @@ if($blogs->have_posts()):
 
             ?>
             
-            <div class="col-12 text-center mt-5">
-                <a class="btn font-weight-bolder btn-blog-more" href="/blogs.html">
+            <div class="col-12 text-center">
+                <a class="btn font-weight-bolder btn-blog-more" href="<?= site_url('blog') ?>">
                     <i class=""></i> View More Blogs
                 </a>
             </div>

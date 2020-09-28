@@ -5,15 +5,26 @@
     <div class="intro-content display-table">
         <div class="table-cell">
             <div class="container">
-                <h2 class="intro-title mb-4">Blog Details</h2>
-                <ol class="breadcrumb d-flex justify-content-center">
-                    <li class="breadcrumb-item">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">Library</a>
-                    </li>
-                    <li class="breadcrumb-item active">Data</li>
+                <h2 class="intro-title mb-4">Blog Post</h2>
+                <ol class="breadcrumb d-flex justify-content-center font-weight-bolder text-white">
+                    <?php
+
+                    $category = get_the_category();
+                    
+                    if(isset($category[0]->name)):
+
+                    ?>
+                        <li class="breadcrumb-item">
+                            <span>Category</span>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#"><?= $category[0]->name ?></a>
+                        </li>
+                    <?php
+
+                    endif;
+
+                    ?>
                 </ol>
             </div>
         </div>
@@ -179,13 +190,13 @@
                     <div class="widget-sidebar sidebar-search">
                         <h5 class="sidebar-title">Search</h5>
                         <div class="sidebar-content">
-                            <form>
+                            <form action="<?= site_url('blog') ?>" method="GET">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                                    <input type="text" name="term" class="form-control" placeholder="Search for blog..." aria-label="Search for...">
                                     <span class="input-group-btn">
-                    <button class="btn btn-secondary btn-search" type="button">
-                    <span class="ion-android-search"></span>
-                                    </button>
+                                        <button class="btn btn-secondary btn-search" type="submit">
+                                            <span class="ion-android-search"></span>
+                                        </button>
                                     </span>
                                 </div>
                             </form>
@@ -195,68 +206,57 @@
                         <h5 class="sidebar-title">Recent Post</h5>
                         <div class="sidebar-content">
                             <ul class="list-sidebar">
-                                <li>
-                                    <a href="#">Atque placeat maiores.</a>
-                                </li>
-                                <li>
-                                    <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                                </li>
-                                <li>
-                                    <a href="#">Nam quo autem exercitationem.</a>
-                                </li>
-                                <li>
-                                    <a href="#">Atque placeat maiores nam quo autem</a>
-                                </li>
-                                <li>
-                                    <a href="#">Nam quo autem exercitationem.</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="widget-sidebar">
-                        <h5 class="sidebar-title">Archives</h5>
-                        <div class="sidebar-content">
-                            <ul class="list-sidebar">
-                                <li>
-                                    <a href="#">September, 2017.</a>
-                                </li>
-                                <li>
-                                    <a href="#">April, 2017.</a>
-                                </li>
-                                <li>
-                                    <a href="#">Nam quo autem exercitationem.</a>
-                                </li>
-                                <li>
-                                    <a href="#">Atque placeat maiores nam quo autem</a>
-                                </li>
-                                <li>
-                                    <a href="#">Nam quo autem exercitationem.</a>
-                                </li>
+                                <?php 
+
+                                $latestArgs = [
+                                    'limit' => 5
+                                ];
+                                $latest = new WP_Query($latestArgs);
+
+                                while($latest->have_posts()): $latest->the_post();
+
+                                ?>
+
+                                    <li>
+                                        <a href="<?= permalink_link() ?>"><?= the_title() ?></a>
+                                    </li>
+                                
+                                <?php
+
+                                endwhile;
+
+                                ?>
+
                             </ul>
                         </div>
                     </div>
                     <div class="widget-sidebar widget-tags">
-                        <h5 class="sidebar-title">Tags</h5>
+                        <h5 class="sidebar-title">Categories</h5>
                         <div class="sidebar-content">
                             <ul>
-                                <li>
-                                    <a href="#">Web.</a>
-                                </li>
-                                <li>
-                                    <a href="#">Design.</a>
-                                </li>
-                                <li>
-                                    <a href="#">Travel.</a>
-                                </li>
-                                <li>
-                                    <a href="#">Photoshop</a>
-                                </li>
-                                <li>
-                                    <a href="#">Corel Draw</a>
-                                </li>
-                                <li>
-                                    <a href="#">JavaScript</a>
-                                </li>
+                                <?php 
+
+                                $categories = get_categories();
+                                
+                                for($i = 0; $i <= count($categories); $i++):
+
+                                    if($categories[$i]->name != ''):
+
+                                ?>
+
+                                    <li>
+                                        <a href="<?= site_url('blog?category=' . $categories[$i]->name) ?>">
+                                            <?= $categories[$i]->name ?>
+                                        </a>
+                                    </li>
+
+                                <?php
+
+                                    endif;
+                                    
+                                endfor;
+
+                                ?>
                             </ul>
                         </div>
                     </div>
