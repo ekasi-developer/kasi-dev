@@ -16,8 +16,8 @@
                 $blogsArgs = [
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'posts_per_page' => 6,
-                    'offset' => get_query_var('paged') == 0 ? 0 : get_query_var('paged'),
+                    'posts_per_page' => $limit = 6,
+                    'offset' => get_query_var('paged') == 0 ? 0 : (get_query_var('paged') - 1) * $limit,
                     's' => sanitize_text_field($_GET['term']),
                     'category_name' => isset($_GET['category']) ? sanitize_text_field($_GET['category']) : null
                 ];

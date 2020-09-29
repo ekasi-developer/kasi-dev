@@ -5,10 +5,13 @@
             <div class="col-sm-12">
                 <div class="copyright-box">
                     <p class="copyright">
-                        &copy; Copyright <strong>Themba.Website</strong>. All Rights Reserved
+                        &copy;Copyright
+                        <a href="<?= site_url('/') ?>">
+                            <strong class="text-white">Themba.Website</strong>
+                        </a>. All Rights Reserved
                     </p>
                     <div class="credits">
-                        Made by <a href="https://themba.website/">T.L.N</a>
+                        Made by T.L.N
                     </div>
                 </div>
             </div>

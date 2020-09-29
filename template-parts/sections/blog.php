@@ -22,7 +22,7 @@ if($blogs->have_posts()):
                         Blog
                     </h3>
                     <p class="subtitle-a">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Get the latest blog post and stay up to date.
                     </p>
                     <div class="line-mf"></div>
                 </div>

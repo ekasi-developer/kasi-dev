@@ -20,7 +20,8 @@ if($projects->have_posts()):
                 <div class="title-box text-center">
                     <h3 class="title-a">Portfolio</h3>
                     <p class="subtitle-a">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        This is my lastest work/projects for more info get in
+                        <a href="<?= site_url('/#contact') ?>" class="text-muted"><span class="ion-ios-telephone"></span> touch</a>
                     </p>
                     <div class="line-mf"></div>
                 </div>

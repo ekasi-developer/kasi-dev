@@ -37,15 +37,15 @@ $post_meta_data = get_post_meta(get_the_ID());
 
                             <?php
                             
-                            if(isset($post_meta_data['langugues'][0])):
+                            if(isset($post_meta_data['languages'][0])):
 
-                                $langugues = explode(',', $post_meta_data['langugues'][0]);
+                                $languages = explode(',', $post_meta_data['languages'][0]);
                             
-                                for($i = 0; $i < count($langugues); $i++):
+                                for($i = 0; $i < count($languages); $i++):
 
                             ?>
 
-                                <span class="badge badge-dark"><?= $langugues[$i] ?></span>
+                                <span class="badge badge-dark"><?= $languages[$i] ?></span>
 
                             <?php
 
@@ -59,7 +59,27 @@ $post_meta_data = get_post_meta(get_the_ID());
                 </div>
                 <div class="col-sm-4">
                     <div class="w-like">
-                        <span class="ion-social-github portfilio-link-btn" value="https://github.com/lucas11776/orangefarmnews"></span>
+                        <?php
+
+                        if($post_meta_data['github'][0]):
+
+                        ?>
+
+                        <span class="ion-social-github portfilio-link-btn" value="<?= $post_meta_data['github'][0] ?>"></span>
+
+                        <?php
+
+                        else:
+
+                        ?>
+
+                        <span class="ion-close-circled"></span>
+
+                        <?php
+
+                        endif;
+
+                        ?>
                     </div>
                 </div>
             </div>
