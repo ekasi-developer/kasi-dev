@@ -3,9 +3,10 @@
         <h4 class="title-comments title-left">Comments (<?= get_comments_number() ?>)</h4>
     </div>
     <ul class="list-comments">
-            <?php
-
-        $comments = get_comments();
+        <?php
+        
+        $commentsArgs = ['post_id' => get_the_ID()];
+        $comments = get_comments($commentsArgs);
 
         for($i = 0; $i < count($comments); $i++):
 

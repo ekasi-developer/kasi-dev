@@ -76,13 +76,19 @@
                                     </h5>
                                 </div>
                                 <p class="lead small">
-                                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.
+                                    Since from my childhood I was always a child that is interested in how devices worked from radio to television I opened my first radio at an age of 5 years old I will be truthful it ended badly for the radio I guess that was the start of something big. After that incident I learned that devices most be handle with care few year later I had access to first my first computer at an age of 7 years old by that time I was only interested in game.
                                 </p>
                                 <p class="lead small">
-                                    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
+                                    One night the computer crashed it was running windows XP the windows to hate I had the copy of the windows disk, so the only solution I had was to try to boot it for myself but this time was a successful story windows was installed since that day I have installed my version of window in my computers.
                                 </p>
                                 <p class="lead small">
-                                    Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                                    After few years later when I was age 15 years old I started to ask myself how website and application work I did some research but by that time I did not have much time because I used to be a soccer player I was always in the pitch training during the week and playing tournaments in weekends. That’s when I come I cross a language called C++ and my brother friend give me a copy of Visual Studio 2013 Pro he was studying Computer Science that means my first hello world application was build using C++.
+                                </p>
+                                <p class="lead small">
+                                    Few year later I had a major ACL surgery at an age of 17 years old so I had 3 months of recovery at home that was that perfect time to practice programming C++ was starting to get hard when I started to use SDL library some I did some research again. Many blog recommended HTML, CSS and JavaScript but for me it felt wrong building static website I needed to build real application and I added PHP and MySQL. Honestly those blogs were correct learning all those technologies at the same time it takes years fully understand them.
+                                </p>
+                                <p class="lead small">
+                                    One year and few months later I felt ready to start developing for the real world I build a small showcase project called OrangeFarmNews and went to a local internet café that’s where I got my first real world project called MoneyWiseLoans it was a local loan broker, after some time I started to learn frameworks such as Laravel, Angular and NodeJs even today my mean focus is in NodeJs that’s my story.
                                 </p>
                             </div>
                         </div>

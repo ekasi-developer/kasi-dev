@@ -71,7 +71,7 @@ function products_custom_post_type()
             'add_new_item' => 'Add New Project',
             'edit_item' => 'Edit Project'
         ],
-        'menu-icon' => 'dashicons-admin-tools',
+        'menu-icon' => 'dashicons dashicons-admin-tools',
         'public' => true,
         'has_archive' => true,
         'supports' => [
@@ -92,7 +92,7 @@ function testimonials_custom_post_type()
             'add_new_item' => 'Add New Testimonial',
             'edit_item' => 'Edit Testimonial'
         ],
-        'menu-icon' => 'dashicons-format-qoute',
+        'menu-icon' => 'dashicons dashicons-format-qoute',
         'public' => true,
         'has_archive' => true,
         'supports' => [
